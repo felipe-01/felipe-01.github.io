@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="-----"/>
+
+     <title>Página</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="otro.css">
+    
+</head>
+<body>
+    <div class="navbar-fixed">
+        <nav class="blue">
+            <div class="nav-wrapper container">
+                <a href="#" class="brand-logo right">LOGO</a>
+                <ul class="hide-on-med-and-down">
+                    <li><a href="#">MIS ARCHIVOS</a></li>
+                    <li><a href="#">CHATS</a></li>
+                    <li><a href="Contacto.html">CONTACTO</a></li>
+                    <li>
+                        <a href="#" class="dropdown-trigger" data-target="id_drop">
+                            Cursos
+                            <i class="material-icons right">arrow_drop_down</i>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container section" id="alinear_buscador">
+        <div class="row">
+            <div class="input-field col s6">
+                <i class="material-icons prefix">search</i>
+                <input type="text" id="buscar" class="autocomplete">
+                <label for="buscar">Buscar...</label>
+            </div>
+        </div>
+    </div>
+    <div class="fixed-action-btn">
+        <a href="#" class="btn-floating red btn-large">
+            <i class="material-icons">mode_edit</i>
+        </a>
+        <ul>
+            <li>
+                <a href="" class="btn-floating green">
+                    <i class="material-icons">create</i>
+                </a>
+            </li>
+            <li>
+                <a href="" class="btn-floating blue">
+                    <i class="material-icons">attach_file</i>
+                </a>
+            </li>
+            <li>
+                <a href="" class="btn-floating purple">
+                    <i class="material-icons">chat</i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="container section" id="alinear">
+        <a href="#" class="sidenav-trigger" data-target="menu-side">
+            <i class="material-icons">menu</i>
+        </a>
+        <ul class="sidenav" id="menu-side">
+            <li>
+                <div class="user-view">
+                    <div class="background">
+                        <img src="foto1.jpg" id="foto">
+                    </div>
+                    <a href="#">
+                        <img src="yo.jpg" alt="" class="circle">
+                    </a>
+                    <a href="#">
+                        <span class="name white-text">Felipe Muñoz</span>
+                    </a>
+                    <a href="#">
+                        <span class="email white-text">felipeandres2013434@gmail.com</span>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="material-icons">cloud</i>
+                    Recibidos
+                </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a href="#">
+                    <i class="material-icons">cloud</i>
+                    Spam
+                </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a href="#">
+                    <i class="material-icons">cloud</i>
+                    Todos
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <ul id="id_drop" class="dropdown-content">
+        <li><a href="#">Enlace</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Enlace</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Enlace</a></li>
+    </ul>
+
+    <!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        var options = {
+            data: {
+                "HTML": null,
+                "CSS": null,
+                "Angular": 'https//placehold.it/250x250'
+            },
+            onAutocomplete: function(){
+            console.log('diste clic')
+            },
+        };
+
+        var elems = document.querySelectorAll('.autocomplete');
+        var instances = M.Autocomplete.init(elems, options);
+    });
+    const respuesta = document.getElementById('respuesta');
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.fixed-action-btn');
+        var instances = M.FloatingActionButton.init(elems)
+
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems);
+    });
+</script>
+<script>
+    const elemsDropdown =document.querySelectorAll(".dropdown-trigger");
+    const instancesDropdown = M.Dropdown.init(elemsDropdown);
+</script>
+
+
+</body>
+</html>
